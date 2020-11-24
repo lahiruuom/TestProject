@@ -21,7 +21,14 @@ class ViewController: UIViewController {
         viewController!.viewModel = viewModel
         return viewController!
     }
-
+    
+    // MARK: IBOutlets
+    @IBOutlet weak var dateDescLabel: UILabel!
+    @IBOutlet weak var monthLabel: UILabel!
+    @IBOutlet weak var taskLabel: UILabel!
+    @IBOutlet weak var floatingButttonContainer: UIView!
+    @IBOutlet weak var tabelView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

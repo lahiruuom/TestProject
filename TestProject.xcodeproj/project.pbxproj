@@ -16,6 +16,10 @@
 		F5FC7CEB256CA8750099FC87 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FC7CEA256CA8750099FC87 /* Config.swift */; };
 		F5FC7CEE256CA90F0099FC87 /* TodoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FC7CED256CA90F0099FC87 /* TodoAPI.swift */; };
 		F5FC7CF8256CAD120099FC87 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FC7CF7256CAD120099FC87 /* ViewModel.swift */; };
+		F5FC7CFC256CB72F0099FC87 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FC7CFB256CB72F0099FC87 /* UIColor+Extensions.swift */; };
+		F5FC7D00256CB7C60099FC87 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FC7CFF256CB7C60099FC87 /* Date+Extension.swift */; };
+		F5FC7D06256CCC3F0099FC87 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FC7D04256CCC3F0099FC87 /* TableViewCell.swift */; };
+		F5FC7D07256CCC3F0099FC87 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5FC7D05256CCC3F0099FC87 /* TableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		F5FC7CEA256CA8750099FC87 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		F5FC7CED256CA90F0099FC87 /* TodoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAPI.swift; sourceTree = "<group>"; };
 		F5FC7CF7256CAD120099FC87 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		F5FC7CFB256CB72F0099FC87 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		F5FC7CFF256CB7C60099FC87 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		F5FC7D04256CCC3F0099FC87 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		F5FC7D05256CCC3F0099FC87 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +94,7 @@
 			children = (
 				F5FC7CE0256CA6890099FC87 /* AppHelpers */,
 				F5FC7CE5256CA8370099FC87 /* NetworkService */,
+				F5FC7CFA256CB7190099FC87 /* Extention */,
 				F5FC7CE1256CA6C10099FC87 /* API */,
 				F5FC7CE2256CA6F10099FC87 /* Model */,
 				F5FC7CE3256CA7090099FC87 /* CustomView */,
@@ -131,6 +140,7 @@
 		F5FC7CE3256CA7090099FC87 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				F5FC7D03256CCC270099FC87 /* TabaleViewCell */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -151,6 +161,24 @@
 				F5FC7CF7256CAD120099FC87 /* ViewModel.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F5FC7CFA256CB7190099FC87 /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				F5FC7CFB256CB72F0099FC87 /* UIColor+Extensions.swift */,
+				F5FC7CFF256CB7C60099FC87 /* Date+Extension.swift */,
+			);
+			path = Extention;
+			sourceTree = "<group>";
+		};
+		F5FC7D03256CCC270099FC87 /* TabaleViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F5FC7D04256CCC3F0099FC87 /* TableViewCell.swift */,
+				F5FC7D05256CCC3F0099FC87 /* TableViewCell.xib */,
+			);
+			path = TabaleViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5FC7CA9256CA4420099FC87 /* Assets.xcassets in Resources */,
+				F5FC7D07256CCC3F0099FC87 /* TableViewCell.xib in Resources */,
 				F5FC7CA7256CA4420099FC87 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,7 +298,10 @@
 				F5FC7CE7256CA8520099FC87 /* NetworkManager.swift in Sources */,
 				F5FC7CEB256CA8750099FC87 /* Config.swift in Sources */,
 				F5FC7CEE256CA90F0099FC87 /* TodoAPI.swift in Sources */,
+				F5FC7D06256CCC3F0099FC87 /* TableViewCell.swift in Sources */,
 				F5FC7CA4256CA4420099FC87 /* ViewController.swift in Sources */,
+				F5FC7CFC256CB72F0099FC87 /* UIColor+Extensions.swift in Sources */,
+				F5FC7D00256CB7C60099FC87 /* Date+Extension.swift in Sources */,
 				F5FC7CF8256CAD120099FC87 /* ViewModel.swift in Sources */,
 				F5FC7CA0256CA4420099FC87 /* AppDelegate.swift in Sources */,
 			);
