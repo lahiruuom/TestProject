@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		9E6F84455A1102D19F7B9085 /* Pods_TestProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 137377B5FDC730BE64CFA435 /* Pods_TestProject.framework */; };
+		F538893F256CD6CA009B41B9 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F538893E256CD6CA009B41B9 /* ReusableView.swift */; };
+		F5388944256CD794009B41B9 /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5388943256CD794009B41B9 /* TodoModel.swift */; };
+		F5388948256CD80B009B41B9 /* UIViewController+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5388947256CD80B009B41B9 /* UIViewController+Extention.swift */; };
+		F538894C256CEA59009B41B9 /* TodoAddAndUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F538894B256CEA59009B41B9 /* TodoAddAndUpdateViewController.swift */; };
+		F538894F256CEA64009B41B9 /* TodoAddAndUpdateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F538894E256CEA64009B41B9 /* TodoAddAndUpdateViewModel.swift */; };
 		F5FC7CA0256CA4420099FC87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FC7C9F256CA4420099FC87 /* AppDelegate.swift */; };
 		F5FC7CA4256CA4420099FC87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FC7CA3256CA4420099FC87 /* ViewController.swift */; };
 		F5FC7CA7256CA4420099FC87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5FC7CA5256CA4420099FC87 /* Main.storyboard */; };
@@ -16,7 +21,7 @@
 		F5FC7CEB256CA8750099FC87 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FC7CEA256CA8750099FC87 /* Config.swift */; };
 		F5FC7CEE256CA90F0099FC87 /* TodoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FC7CED256CA90F0099FC87 /* TodoAPI.swift */; };
 		F5FC7CF8256CAD120099FC87 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FC7CF7256CAD120099FC87 /* ViewModel.swift */; };
-		F5FC7CFC256CB72F0099FC87 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FC7CFB256CB72F0099FC87 /* UIColor+Extensions.swift */; };
+		F5FC7CFC256CB72F0099FC87 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FC7CFB256CB72F0099FC87 /* UIColor+Extension.swift */; };
 		F5FC7D00256CB7C60099FC87 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FC7CFF256CB7C60099FC87 /* Date+Extension.swift */; };
 		F5FC7D06256CCC3F0099FC87 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FC7D04256CCC3F0099FC87 /* TableViewCell.swift */; };
 		F5FC7D07256CCC3F0099FC87 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5FC7D05256CCC3F0099FC87 /* TableViewCell.xib */; };
@@ -26,6 +31,11 @@
 		137377B5FDC730BE64CFA435 /* Pods_TestProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39EC05BEA7582032CFCE8D78 /* Pods-TestProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestProject.debug.xcconfig"; path = "Target Support Files/Pods-TestProject/Pods-TestProject.debug.xcconfig"; sourceTree = "<group>"; };
 		B149BAB80331F668F355BBD2 /* Pods-TestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestProject.release.xcconfig"; path = "Target Support Files/Pods-TestProject/Pods-TestProject.release.xcconfig"; sourceTree = "<group>"; };
+		F538893E256CD6CA009B41B9 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		F5388943256CD794009B41B9 /* TodoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
+		F5388947256CD80B009B41B9 /* UIViewController+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extention.swift"; sourceTree = "<group>"; };
+		F538894B256CEA59009B41B9 /* TodoAddAndUpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAddAndUpdateViewController.swift; sourceTree = "<group>"; };
+		F538894E256CEA64009B41B9 /* TodoAddAndUpdateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAddAndUpdateViewModel.swift; sourceTree = "<group>"; };
 		F5FC7C9C256CA4420099FC87 /* TestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5FC7C9F256CA4420099FC87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5FC7CA3256CA4420099FC87 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,7 +46,7 @@
 		F5FC7CEA256CA8750099FC87 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		F5FC7CED256CA90F0099FC87 /* TodoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAPI.swift; sourceTree = "<group>"; };
 		F5FC7CF7256CAD120099FC87 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		F5FC7CFB256CB72F0099FC87 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		F5FC7CFB256CB72F0099FC87 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		F5FC7CFF256CB7C60099FC87 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		F5FC7D04256CCC3F0099FC87 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		F5FC7D05256CCC3F0099FC87 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
@@ -71,6 +81,23 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		F538893D256CD6B9009B41B9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F538893E256CD6CA009B41B9 /* ReusableView.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F5388951256CEA67009B41B9 /* TodoAddAndUpdateViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F538894B256CEA59009B41B9 /* TodoAddAndUpdateViewController.swift */,
+				F538894E256CEA64009B41B9 /* TodoAddAndUpdateViewModel.swift */,
+			);
+			path = TodoAddAndUpdateViewController;
+			sourceTree = "<group>";
+		};
 		F5FC7C93256CA4420099FC87 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +121,7 @@
 			children = (
 				F5FC7CE0256CA6890099FC87 /* AppHelpers */,
 				F5FC7CE5256CA8370099FC87 /* NetworkService */,
+				F538893D256CD6B9009B41B9 /* Protocols */,
 				F5FC7CFA256CB7190099FC87 /* Extention */,
 				F5FC7CE1256CA6C10099FC87 /* API */,
 				F5FC7CE2256CA6F10099FC87 /* Model */,
@@ -106,6 +134,7 @@
 		F5FC7CDF256CA65D0099FC87 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				F5388951256CEA67009B41B9 /* TodoAddAndUpdateViewController */,
 				F5FC7CF6256CACFA0099FC87 /* ViewController */,
 				F5FC7CA5256CA4420099FC87 /* Main.storyboard */,
 			);
@@ -133,6 +162,7 @@
 		F5FC7CE2256CA6F10099FC87 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F5388943256CD794009B41B9 /* TodoModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -166,8 +196,9 @@
 		F5FC7CFA256CB7190099FC87 /* Extention */ = {
 			isa = PBXGroup;
 			children = (
-				F5FC7CFB256CB72F0099FC87 /* UIColor+Extensions.swift */,
+				F5FC7CFB256CB72F0099FC87 /* UIColor+Extension.swift */,
 				F5FC7CFF256CB7C60099FC87 /* Date+Extension.swift */,
+				F5388947256CD80B009B41B9 /* UIViewController+Extention.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -295,15 +326,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F538894C256CEA59009B41B9 /* TodoAddAndUpdateViewController.swift in Sources */,
 				F5FC7CE7256CA8520099FC87 /* NetworkManager.swift in Sources */,
 				F5FC7CEB256CA8750099FC87 /* Config.swift in Sources */,
 				F5FC7CEE256CA90F0099FC87 /* TodoAPI.swift in Sources */,
+				F5388944256CD794009B41B9 /* TodoModel.swift in Sources */,
 				F5FC7D06256CCC3F0099FC87 /* TableViewCell.swift in Sources */,
 				F5FC7CA4256CA4420099FC87 /* ViewController.swift in Sources */,
-				F5FC7CFC256CB72F0099FC87 /* UIColor+Extensions.swift in Sources */,
+				F5388948256CD80B009B41B9 /* UIViewController+Extention.swift in Sources */,
+				F538893F256CD6CA009B41B9 /* ReusableView.swift in Sources */,
+				F5FC7CFC256CB72F0099FC87 /* UIColor+Extension.swift in Sources */,
 				F5FC7D00256CB7C60099FC87 /* Date+Extension.swift in Sources */,
 				F5FC7CF8256CAD120099FC87 /* ViewModel.swift in Sources */,
 				F5FC7CA0256CA4420099FC87 /* AppDelegate.swift in Sources */,
+				F538894F256CEA64009B41B9 /* TodoAddAndUpdateViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

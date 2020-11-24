@@ -29,9 +29,96 @@ class ViewController: UIViewController {
     @IBOutlet weak var floatingButttonContainer: UIView!
     @IBOutlet weak var tabelView: UITableView!
     
+    // MARK: Override Methodes
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getTodos()
+    }
+    
+    @IBAction func addTodoDidPressed(_ sender: UIButton) {
+        let vc = TodoAddAndUpdateViewController.create(viewModel: TodoAddAndUpdateViewModel(editViewType: .add, todoObject: nil))
+        vc.modalPresentationStyle = .overCurrentContext
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+}
+
+// MARK: - Fileprivate Methods
+extension ViewController {
+    
+    fileprivate func setupView() {
+        floatingButttonContainer.layer.cornerRadius = floatingButttonContainer.frame.height / 2
+        dateDescLabel.text = Date().toDateFormat()
+        monthLabel.text = Date().toMonth()
+        tabelView.register(TableViewCell.self)
+    }
+    
+    fileprivate func getTodos() {
+        viewModel!.fetchTodos { (status, message) in
+            if status {
+                self.setNumberOfTask()
+                self.tabelView.reloadData()
+            } else{
+                self.alert(message: message ?? "", title: "Sorry!")
+            }
+        }
+    }
+    
+    fileprivate func setNumberOfTask() {
+        taskLabel.text = "\(viewModel!.todoArray.count) Tasks"
+    }
+    
+    fileprivate func deleteTodo(id: Int) {
+        viewModel!.deleteTodos(id: id) { (status, message) in
+            if status {
+                self.tabelView.reloadData()
+            } else{
+                self.alert(message: message ?? "", title: "Sorry!")
+            }
+        }
+    }
+    
+    
+}
+
+// MARK: - UITableViewDataSource, UITableViewDelegate
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel!.todoArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: TableViewCell.self), for: indexPath) as! TableViewCell
+        let object = self.viewModel!.todoArray[indexPath.row]
+        cell.setupView(todoObject: object)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(viewModel!.tableViewHeight)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        let object = self.viewModel!.todoArray[indexPath.row]
+        if editingStyle == .delete {
+            viewModel!.todoArray.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            deleteTodo(id: object.id)
+            setNumberOfTask()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let object = self.viewModel!.todoArray[indexPath.row]
+        let vc = TodoAddAndUpdateViewController.create(viewModel: TodoAddAndUpdateViewModel(editViewType: .update, todoObject: object))
+        vc.modalPresentationStyle = .overCurrentContext
+        self.present(vc, animated: true, completion: nil)
     }
     
 }

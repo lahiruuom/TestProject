@@ -19,14 +19,14 @@ extension Date {
         return (time,amOrPm)
     }
     
-    func toMonth(format: String = "MMM") -> String {
+    func toMonth(format: String = "MMMM") -> String {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "en_US")
         formatter.dateFormat = format
         return formatter.string(from: self)
     }
     
-    func toDateFormat(format: String = "EEEE, ddQQQQ") -> String {
+    func toDateFormat(format: String = "EEEE, dd") -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = format
         formatter.locale = Locale(identifier: "en_US")

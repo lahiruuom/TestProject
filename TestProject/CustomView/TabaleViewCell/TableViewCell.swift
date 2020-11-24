@@ -9,15 +9,35 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
 
+    // MARK: IBOutlets
+    @IBOutlet weak var checkBoxImg: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    
+    // MARK: Properties
+    var isChecked: Bool = false {
+        didSet {
+            if isChecked {
+                checkBoxImg.image = UIImage(named: "checkedBox")
+            } else{
+                checkBoxImg.image = UIImage(named: "uncheckedBox")
+            }
+        }
+    }
+    
+    // MARK: Override Methodes
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
+    
+}
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+extension TableViewCell {
+    
+    func setupView(todoObject: TodoModel?) {
+        guard let todo = todoObject else { return }
+        titleLabel.text = todo.title
+        isChecked = todo.completed
     }
     
 }
