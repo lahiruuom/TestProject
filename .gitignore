@@ -1,3 +1,26 @@
+### OSX ###
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
 # Xcode
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
@@ -54,7 +77,8 @@ playground.xcworkspace
 # you should judge for yourself, the pros and cons are mentioned at:
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 #
-# Pods/
+Pods/
+Podfile.lock
 #
 # Add this line if you want to avoid checking in source code from the Xcode workspace
 # *.xcworkspace
@@ -88,3 +112,9 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+
+
+codesigndoc_exports/cec6a9e7-5bb7-433b-812a-6e5d8eb1bd4b.iOSTeamProvisioningProfile.mobileprovision
+codesigndoc_exports/df0b3e82-0b8f-4da7-a871-f376d33a276e.iOSTeamStoreProvisioningProfile.mobileprovision
+codesigndoc_exports/Identities.p12
+codesigndoc_exports/xcodebuild-output.log
